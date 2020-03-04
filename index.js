@@ -10,6 +10,7 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({extended: false }));
 app.use(cors());
+app.use('/static', express.static('public'));
 
 
 app.get('/appointments', function (req, res) {

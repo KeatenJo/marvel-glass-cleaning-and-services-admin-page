@@ -1,15 +1,17 @@
 # Resource Name
 ## Appointments
 
+
 # Attributes
-## _id
-## Name
-## Date
-## Time
-## Address
-## Email
-## Phone
-## Notes
+
+### _id
+### Name
+### Date
+### Time
+### Address
+### Email
+### Phone
+### Notes
 
 
 
@@ -47,3 +49,5 @@ Appointments:
 	* type: String
 	* required: true
 
+# Heroku Link #
+https://marvel-glass-cleaning-services.herokuapp.com/static/

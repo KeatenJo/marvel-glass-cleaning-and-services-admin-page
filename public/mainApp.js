@@ -1,11 +1,11 @@
 //List FUNCTION// GET (COLLECTION) REQUEST
 var getAppointmentsFromServer = function () {
-  return fetch("http://localhost:8080/appointments");
+  return fetch("https://marvel-glass-cleaning-services.herokuapp.com/appointments");
 };
 
 //RETRIVE FUNCTION// GET (MEMBER) REQUEST
 var getAppointmentFromServer = function (_id) {
-  return fetch("http://localhost:8080/appointments/" + _id);
+  return fetch("https://marvel-glass-cleaning-services.herokuapp.com/appointments/" + _id);
 };
 
 
@@ -18,7 +18,7 @@ var createAppointmentOnServer = function(newName, newDate, newAddress, newPhone,
 	data += `&email=${encodeURIComponent(newEmail)}`;
 	data += `&notes=${encodeURIComponent(newNotes)}`;
 	data += `&time=${encodeURIComponent(newTime)}`;
-	return fetch("http://localhost:8080/appointments", {
+	return fetch("https://marvel-glass-cleaning-services.herokuapp.com/appointments", {
 		body: data,
 		method: "POST",
 		headers: {
@@ -37,7 +37,7 @@ var updateAppointmentOnServer = function( _id, newName, newDate, newAddress, new
 	data += `&email=${encodeURIComponent(newEmail)}`;
 	data += `&notes=${encodeURIComponent(newNotes)}`;
 	data += `&time=${encodeURIComponent(newTime)}`;
-	return fetch("http://localhost:8080/appointments/" + _id, {
+	return fetch("https://marvel-glass-cleaning-services.herokuapp.com/appointments/" + _id, {
 		body: data,
 		method: "PUT",
 		headers: {
@@ -48,7 +48,7 @@ var updateAppointmentOnServer = function( _id, newName, newDate, newAddress, new
 };
 
 var deleteAppointmentOnServer = function(_id) {
-	return fetch("http://localhost:8080/appointments/" + _id, {
+	return fetch("https://marvel-glass-cleaning-services.herokuapp.com/appointments/" + _id, {
 		method: "DELETE",
 	});
 };
